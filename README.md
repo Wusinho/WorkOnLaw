@@ -23,14 +23,16 @@ No obligatorio, pero suma varios puntos extra :
 
 - Si aplicas la siguiente regla en el cálculo de la experiencia: En caso de que el abogado haya trabajado en 2 lugares al mismo tiempo, sólo cuenta la experiencia de uno de estos trabajos. El criterio aplica a nivel de días, por lo tanto se debe considerar que hay días que podrían coincidir entre ambos empleos y otros no.
 
-# Description of the Project
+# Descripcion del Desafio
+
+El objetivo del projecto es hacer un request en una API externar, regresar el resultado con el correo del sujeto ademas haciendo un calculo de los años de experiencia, sin duplicar los dias si el individuo trabajo en dos lugares al mismo tiempo.
 
 Para el desarrollo del proyecto fue usado:
 
 - Rails v 6.1.4.4
 - Ruby v 2.7.2
 
-### **Endpoints of API**
+## Endpoint of API
 
 | Method | Endpoint   |                    Functionality |
 | ------ | ---------- | -------------------------------: |
