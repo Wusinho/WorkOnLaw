@@ -36,7 +36,7 @@ Para el desarrollo del proyecto fue usado:
 
 | Method | Endpoint   |                    Functionality |
 | ------ | ---------- | -------------------------------: |
-| GET    | candidates | Search for candidates experience |
+| GET    | candidates | Busqueda de candidatos en la API |
 
 - Cuando la persona esta en la base de datos:
   ![image](./app/assets/niko_test.png)
