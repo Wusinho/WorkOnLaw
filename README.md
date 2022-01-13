@@ -11,8 +11,8 @@
   "work_experience_years": 1.6
   }
 
-- Si un trabajo no tiene fecha de término, se entiende que el abogado aún se encuentra trabajando en ese lugar
-  Los años de experiencia deben venir en formato decimal. Queda a tu elección el método de redondeo a utilizar
+- Si un trabajo no tiene fecha de término, se entiende que el abogado aún se encuentra trabajando en ese lugar.
+- Los años de experiencia deben venir en formato decimal. Queda a tu elección el método de redondeo a utilizar
 - Se debe utilizar Ruby On Rails
 - Como entregable se espera que nos compartas una URL de un repo para descargar el código
 
@@ -25,7 +25,7 @@ No obligatorio, pero suma varios puntos extra :
 
 # Description of the Project
 
-For the development of the project, the following tools were used:
+Para el desarrollo del proyecto fue usado:
 
 - Rails v 6.1.4.4
 - Ruby v 2.7.2
@@ -38,24 +38,23 @@ For the development of the project, the following tools were used:
 
 ## How to start the project from your Local environment
 
-- Open your terminal and cd where you want to store the project
-- Run the following command - `git clone https://github.com/Wusinho/WorkOnLaw.git`
-- Cd into the created directory
+- Correr en terminal el comando - `git clone https://github.com/Wusinho/WorkOnLaw.git`
+- Cd en el directorio creado
 - Run $ `bundle install`
-- On terminal type $ `rails db:migrate`
-- On terminal type $ `rails server`
+- En la terminal tipear $ `rails db:migrate`
+- En la terminal tipear $ `rails server`
 
 ## Tests
 
 ![image](./app/assets/rspec.png)
 
-- On terminal type $ `rspec`
+- En la terminal tipear $ `rspec`
 
-## Extra Ball 2
+## Duplicidad de datos
 
-- I18n was implemented to the subscription (`./config/locales/en.yml`)
+- Para evitar la duplicidad de dias, se creo un service en la ruta:
 
-![image](./app/assets/images/I18n.png)
+  `./spec/services/candidate_search_services_spec.rb`
 
 ## Author
 
