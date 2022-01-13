@@ -1,54 +1,40 @@
-# Micolet coding challenge
+# WorkOnLaw challenge
 
-# Objectives
+# Objetivos
 
-- The email and user preferences must be stored in Database.
-- The same email cannot be registered twice, an error message will be displayed to the user indicating that the email already exists.
-- Make a simple validation of the user's input to guarantee that what they have entered complies with the valid format of an email.
-- The user may select one or more preferences, but they must select at least one of them.
-- Once the user has been registered successfully, an email will be sent confirming their subscription.
+- El endpoint recibe como parámetro del request el correo del abogado que se necesita consultar
 
-Extra Ball 1 (Optional):
+- El cálculo de la experiencia se realiza en base a las fechas de inicio y término de cada trabajo
+  La respuesta esperada es un json que contenga el correo y experiencia del abogado requerido. Abajo un ejemplo
+  {
+  "email": "example@email.com",
+  "work_experience_years": 1.6
+  }
 
-- Even if the email has a valid format, that does not mean that it is an existing email. It could be that the domain does not exist, or it is not configured to receive mail. To prevent submitting this type of emails, we will only accept those that obtain a score greater than 0.7 when looking up in this API:
+- Si un trabajo no tiene fecha de término, se entiende que el abogado aún se encuentra trabajando en ese lugar
+  Los años de experiencia deben venir en formato decimal. Queda a tu elección el método de redondeo a utilizar
+- Se debe utilizar Ruby On Rails
+- Como entregable se espera que nos compartas una URL de un repo para descargar el código
 
-Extra Ball 2 (Optional):
+No obligatorio, pero suma varios puntos extra :
 
-- The landing page will be used in several countries, therefore it should be prepared to adapt it to different languages. This is what we know in software development as internationalization (i18n).
+- Uso de pruebas automatizadas
+  Extra Ball 2 (Optional):
+
+- Si aplicas la siguiente regla en el cálculo de la experiencia: En caso de que el abogado haya trabajado en 2 lugares al mismo tiempo, sólo cuenta la experiencia de uno de estos trabajos. El criterio aplica a nivel de días, por lo tanto se debe considerar que hay días que podrían coincidir entre ambos empleos y otros no.
 
 # Description of the Project
 
 For the development of the project, the following tools were used:
 
-- Rails v 2.7.2
-- Bootstrap v 5.1
-
-The purpose of the exercise is to build a simple landing page with a functional newsletter submission. Postgresql was used mainly to use the array functionality to save the subscriber's preference.
-
-The project has a landing page with a functional newsletter subscription with a response if the email passes the verification.
-
-![image](./app/assets/images/screenshot.png)
-
-The user can have 3 different kind of error warnings:
-
-- Duplicated email
-
-  ![image](./app/assets/images/duplicated.png)
-
-- Not choosing at least one preference
-
-  ![image](./app/assets/images/preference.png)
-
-- Invalid email ( Extra ball 1)
-
-  ![image](./app/assets/images/valid_email.png)
+- Rails v 6.1.4.4
+- Ruby v 2.7.2
 
 ### **Endpoints of API**
 
-| Method | Endpoint    |        Functionality |
-| ------ | ----------- | -------------------: |
-| GET    | home        |          Lading Page |
-| POST   | subscribers | Create subscriptions |
+| Method | Endpoint   |                    Functionality |
+| ------ | ---------- | -------------------------------: |
+| GET    | candidates | Search for candidates experience |
 
 ## How to start the project from your Local environment
 
