@@ -18,22 +18,30 @@ class CandidateSearchServices
   def self.calculate_days(email)
     arr = find_candidate(email)
     return 'no subject in the database' unless arr
-    total_dates = []
-    sum = 0
-    arr.each do |ele|
-    
-      start_date = Date.parse(ele[:start])
-      end_date = ele[:end] ? Date.parse(ele[:end]) : Date.today
 
-      (start_date..end_date).each do |date|
-         unless total_dates.include?(date)
-          total_dates << date
-          sum += 1
-         end
+    sum = 0
+
+    arr.map do |ele|
+      ele[:start] = Date.parse(ele[:start])
+      if ele[:end].class == NilClass
+        ele[:end] = Date.today
+      else
+        ele[:end] = Date.parse(ele[:end])
       end
-    
     end
-    (sum/365 + (sum%365/30)/12.to_f).round(1)
+  
+    last_big_date = ''
+    arr.each_with_index do |ele, index|
+  
+      if index == 0
+        sum = ele[:end] - ele[:start]
+        last_big_date = ele[:end]
+      elsif last_big_date > ele[:start] && last_big_date < ele[:end]
+        sum += last_big_date - ele[:end]
+      end
+  
+    end
+    (sum/365).to_f.round(1)
   end
 
 
