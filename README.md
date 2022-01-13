@@ -24,7 +24,7 @@ No obligatorio, pero suma varios puntos extra :
 
 # Descripcion del Desafio
 
-El objetivo del projecto es hacer un request en una API externa, regresar el resultado con el correo del sujeto ademas haciendo un calculo de los años de experiencia, sin duplicar los dias si es que el abogado trabajo en dos lugares en un mismo periodo de tiempo.
+El objetivo del projecto es hacer un request en una API externa, regresar el correo del sujeto con los años de experiencia, sin duplicar los dias si es que el abogado trabajo en dos lugares en un mismo periodo de tiempo.
 
 Para el desarrollo del proyecto fue usado:
 
