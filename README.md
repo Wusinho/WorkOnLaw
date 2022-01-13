@@ -36,6 +36,11 @@ Para el desarrollo del proyecto fue usado:
 | ------ | ---------- | -------------------------------: |
 | GET    | candidates | Search for candidates experience |
 
+- Cuando la persona esta en la base de datos:
+  ![image](./app/assets/niko_test.png)
+- Cuando la persona no se encuentra en la base de datos:
+  ![image](./app/assets/pepito.png)
+
 ## How to start the project from your Local environment
 
 - Correr en terminal el comando - `git clone https://github.com/Wusinho/WorkOnLaw.git`
