@@ -39,24 +39,11 @@ For the development of the project, the following tools were used:
 ## How to start the project from your Local environment
 
 - Open your terminal and cd where you want to store the project
-- Run the following command - `git clone https://github.com/Wusinho/nicolet-coding-challenge`
+- Run the following command - `git clone https://github.com/Wusinho/WorkOnLaw.git`
 - Cd into the created directory
 - Run $ `bundle install`
-- On terminal type $ `rails db:create && rails db:migrate`
+- On terminal type $ `rails db:migrate`
 - On terminal type $ `rails server`
-
-## Checking the delivery system
-
-- On terminal: $ `gem install mailcatcher`
-- Type $ `mailcather`
-
-  ![image](./app/assets/images/mailcatcher.png)
-
-- Open the browser and type : `http://127.0.0.1:1080` on search bar
-- Open the landing page at `http://localhost:3000/`
-- Create a subscription with a valid email
-
-  ![image](./app/assets/images/message.png)
 
 ## Tests
 
