@@ -47,7 +47,9 @@ For the development of the project, the following tools were used:
 
 ## Tests
 
-![image](./app/assets/images/rspec.png)
+![image](./app/assets/rspec.png)
+
+- On terminal type $ `rspec`
 
 ## Extra Ball 2
 
